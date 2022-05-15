@@ -79,7 +79,9 @@ cat /home/user/.ssh/nome_arquivo.pub
 ## Copie a fingerprint.
 
 ## Ao realizar o git clone ou git push será solicitado a
-## fingerprint, cole a SHA256: e o processo de copia ou
+## fingerprint, cole a SHA256: 
+
+## Digite ¨yes¨ para confirmar e o processo de copia ou
 ## envio ocorerá.
 
 ## Caso não de certo é porque já foi feito uma configuração
