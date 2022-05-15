@@ -16,7 +16,7 @@ git add *
 
 ## Cria um ponto de restauração.
 ## Create a restore port.
-git commit -m "Criando arquiivo de dados."
+git commit -m "Criando arquivo de dados."
 
 ## Configuração do email cadastrado na conta do GitHub.
 ## Configuration of the email registered in the GitHub account.
@@ -37,6 +37,61 @@ git push --set-upstream origin master
 ## Segundo ou mais envios.
 ## Second or more submissions.
 git push
+
+#############################################################
+## Erro ao fazer upload ou clone
+## Esse erro ocorre apenas na primeira vez que se conecta
+## ao repositório externo. 
+## Será necessário criar uma chave pública e privada SSH.
+
+## No Linux digite:
+ssh-keygen
+
+## Será solicitado um nome opicional. Caso não queira definir 
+## nenhum nome, pressione enter.
+
+## Será solicitado a senha também é opcional.
+## Caso tenha optado por digitar uma senha digite novamente.
+
+## Será gerado duas chaves na pasta do projeto.
+## Colocaue em .ssh na pasta do usuário.
+## Ex: /home/user/.ssh/
+
+## No GitHub entre em Settings no menu superior a direita.
+## O mesmo menu de ¨Sign out¨.
+
+## Clique em ¨SSH and GPG keys¨ no menu a esquerda.
+
+## Clique no botão verde em SSH keys - botão ¨New SSH key¨.
+
+## Copie o conteúdo da chave pública.
+cat /home/user/.ssh/nome_arquivo.pub
+
+## Cole no campo Key.
+
+## Defina um título.
+
+## Clique em ¨ADD SSH key¨
+
+## Será gerado um SHA256 na página do GitHub, ela possui o
+## nome de ¨fingerprint¨
+
+## Copie a fingerprint.
+
+## Ao realizar o git clone ou git push será solicitado a
+## fingerprint, cole a SHA256: e o processo de copia ou
+## envio ocorerá.
+
+## Caso não de certo é porque já foi feito uma configuração
+## anteriormente, verifique se não exite um arquivo com o 
+## nome ¨known_hosts¨ dentor da pasta /home/user/.ssh/.
+## Apague este arquivo e faça o git clone ou git push novamente.
+## Então será solicitado a ¨fingerprint¨. 
+
+#############################################################
+
+# Copia um projeto com todos os arquivos de versão do GIT.
+git clone <endereço_SSH_.git>
 
 #############################################################
 
